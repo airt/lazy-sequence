@@ -8,7 +8,7 @@ rescue => e
 end
 
 task :test do
-  Dir.glob("test/test*.scm").each do |t|
+  Dir.glob("test/*-test.ss").each do |t|
     racket t
   end
 end

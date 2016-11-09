@@ -1,9 +1,9 @@
 
-# lazy-sequence.scm
+# lazy-sequence
 
-A little lazy sequence library for Scheme.
+a little lazy sequence library for scheme
 
-## Usage
+## usage
 
 ```scheme
 
@@ -33,7 +33,7 @@ A little lazy sequence library for Scheme.
 
 ```
 
-## Functions and Macros
+## api
 
 ```scheme
 
@@ -89,10 +89,10 @@ lazy-zip-with
 
 ```
 
-## Test Environment
+## test environment
 
     $ racket -v
-    Welcome to Racket v6.3.
+    Welcome to Racket v6.3
     $ rake
-    racket test/test-lazy-sequence.scm
-    All 29 tests passed!
+    racket test/lazy-sequence-test.ss
+    All 29 tests passed
