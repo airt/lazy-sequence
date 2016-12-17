@@ -1,9 +1,9 @@
 #lang scheme
 
 (require test-engine/racket-tests)
-(require "../src/lazy-sequence.scm")
+(require "../src/lazy-sequence.ss")
 
-;;; Some values and functions ;;;
+;;; some values and functions ;;;
 
 (define (id x) x)
 
@@ -29,7 +29,7 @@
     (lazy-cons 1
       (lazy-zip-with + fibonacci (lazy-cdr fibonacci)))))
 
-;;; Tests ;;;
+;;; tests for these values ;;;
 
 ; natural-numbers
 (check-expect
@@ -46,7 +46,7 @@
   (lazy->list (lazy-take 5 (lazy-drop 15 fibonacci)))
   '(987 1597 2584 4181 6765))
 
-;;; List operations ;;;
+;;; list operations ;;;
 
 ; lazy?
 (check-expect
@@ -106,7 +106,7 @@
         natural-numbers)))
   '(1 3 5 7 9))
 
-;;; Special folds ;;;
+;;; special folds ;;;
 
 ; lazy-and
 (check-expect
@@ -166,7 +166,7 @@
       '(0 3 6)))
   (range 0 9))
 
-;;; Infinite lists ;;;
+;;; infinite lists ;;;
 
 ; lazy-iterate
 (check-expect
@@ -191,7 +191,7 @@
         (lazy-range 0 3))))
   '(0 1 2 0 1))
 
-;;; Sublists ;;;
+;;; sublists ;;;
 
 ; lazy-take
 (check-expect
@@ -241,7 +241,7 @@
     (range 0 5)
     (range 5 10)))
 
-;;; Zipping lists ;;;
+;;; zipping lists ;;;
 
 ; lazy-zip
 (check-expect
@@ -258,5 +258,7 @@
       primes
       (lazy-range 0 5)))
   '(2 4 7 10 15))
+
+;;; run tests ;;;
 
 (test)

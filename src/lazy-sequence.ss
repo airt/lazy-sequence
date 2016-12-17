@@ -2,12 +2,12 @@
 
 (provide
 
-  ;;; Call by need ;;;
+  ;;; call by need ;;;
 
   need
   defer
 
-  ;;; List operations ;;;
+  ;;; list operations ;;;
 
   lazy?
   lazy->list
@@ -27,7 +27,7 @@
   lazy-filter
   lazy-map
 
-  ;;; Special folds ;;;
+  ;;; special folds ;;;
 
   lazy-and
   lazy-or
@@ -36,14 +36,14 @@
   lazy-concat
   lazy-concat-map
 
-  ;;; Infinite lists ;;;
+  ;;; infinite lists ;;;
 
   lazy-iterate
   lazy-repeat
   lazy-replicate
   lazy-cycle
 
-  ;;; Sublists ;;;
+  ;;; sublists ;;;
 
   lazy-take
   lazy-drop
@@ -52,14 +52,14 @@
   lazy-split-at
   lazy-span
 
-  ;;; Zipping lists ;;;
+  ;;; zipping lists ;;;
 
   lazy-zip
   lazy-zip-with
 
 )
 
-;;; Call by need ;;;
+;;; call by need ;;;
 
 ; need
 (define need force)
@@ -69,7 +69,7 @@
   (syntax-rules ()
     ((_ e ...) (delay e ...))))
 
-;;; List operations ;;;
+;;; list operations ;;;
 
 ; lazy?
 (define (lazy? xs)
@@ -165,7 +165,7 @@
     '()
     xs))
 
-;;; Special folds ;;;
+;;; special folds ;;;
 
 ; lazy-and
 (define (lazy-and xs)
@@ -216,7 +216,7 @@
   (lazy-concat
     (lazy-map f xs)))
 
-;;; Infinite lists ;;;
+;;; infinite lists ;;;
 
 ; lazy-iterate
 (define (lazy-iterate f x)
@@ -235,7 +235,7 @@
   (lazy-concat
     (lazy-repeat xs)))
 
-;;; Sublists ;;;
+;;; sublists ;;;
 
 ; lazy-take
 (define (lazy-take n xs)
@@ -287,7 +287,7 @@
     '(() ())
     xs))
 
-;;; Zipping lists ;;;
+;;; zipping lists ;;;
 
 ; lazy-zip
 (define (lazy-zip . xss)

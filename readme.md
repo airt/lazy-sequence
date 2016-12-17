@@ -1,12 +1,13 @@
 
 # lazy-sequence
 
-a little lazy sequence library for scheme
+[![Build Status][build-badge]][build-status]
+
+exercises of lazy evaluation
 
 ## usage
 
 ```scheme
-
 (define natural-numbers
   (lazy-iterate add1 0))
 
@@ -30,14 +31,12 @@ a little lazy sequence library for scheme
   (lazy-take 5
     (lazy-drop 50 primes)))
 ; => '(233 239 241 251 257)
-
 ```
 
 ## api
 
 ```scheme
-
-;;; List operations ;;;
+;;; list operations ;;;
 
 lazy?
 lazy->list
@@ -57,7 +56,7 @@ lazy-foldr
 lazy-filter
 lazy-map
 
-;;; Special folds ;;;
+;;; special folds ;;;
 
 lazy-and
 lazy-or
@@ -66,14 +65,14 @@ lazy-all
 lazy-concat
 lazy-concat-map
 
-;;; Infinite lists ;;;
+;;; infinite lists ;;;
 
 lazy-iterate
 lazy-repeat
 lazy-replicate
 lazy-cycle
 
-;;; Sublists ;;;
+;;; sublists ;;;
 
 lazy-take
 lazy-drop
@@ -82,17 +81,15 @@ lazy-drop-while
 lazy-split-at
 lazy-span
 
-;;; Zipping lists ;;;
+;;; zipping lists ;;;
 
 lazy-zip
 lazy-zip-with
-
 ```
 
-## test environment
+## license
 
-    $ racket -v
-    Welcome to Racket v6.3
-    $ rake
-    racket test/lazy-sequence-test.ss
-    All 29 tests passed
+BSD-3-Clause
+
+[build-badge]: https://img.shields.io/travis/airt/lazy-sequence/master.svg
+[build-status]: https://travis-ci.org/airt/lazy-sequence

@@ -1,0 +1,14 @@
+
+# https://docs.travis-ci.com/user/installing-dependencies
+
+language: generic
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:plt/racket'
+    packages:
+      - racket
+
+script:
+  - racket test/*-test.ss
