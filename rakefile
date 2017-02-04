@@ -1,4 +1,3 @@
-
 task default: %i[test]
 
 def racket(file)

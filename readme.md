@@ -1,4 +1,3 @@
-
 # lazy-sequence
 
 [![Build Status][build-badge]][build-status]
